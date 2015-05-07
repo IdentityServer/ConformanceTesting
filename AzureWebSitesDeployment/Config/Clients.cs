@@ -11,59 +11,20 @@ namespace AzureWebSitesDeployment.Config
             {
                 new Client
                 {
-                    ClientName = "Test Client Code Flow",
+                    ClientName = "Basic",
                     Enabled = true,
 
-                    ClientId = "code",
+                    ClientId = "basic",
                     ClientSecrets = new List<ClientSecret>
                     {
                         new ClientSecret("secret".Sha256())
                     },
 
                     Flow = Flows.AuthorizationCode,
-                    AllowClientCredentialsOnly = true,
-
+                    
                     RedirectUris = new List<string>
                     {
-                        "https://someUri",
-                    }
-                },
-                new Client
-                {
-                    ClientName = "Test Client Implicit Flow",
-                    Enabled = true,
-
-                    ClientId = "implicit",
-                    ClientSecrets = new List<ClientSecret>
-                    {
-                        new ClientSecret("secret".Sha256())
-                    },
-
-                    Flow = Flows.Implicit,
-                    AllowClientCredentialsOnly = true,
-
-                    RedirectUris = new List<string>
-                    {
-                        "https://someUri",
-                    }
-                },
-                new Client
-                {
-                    ClientName = "Test Client Hybrid Flow",
-                    Enabled = true,
-
-                    ClientId = "hybrid",
-                    ClientSecrets = new List<ClientSecret>
-                    {
-                        new ClientSecret("secret".Sha256())
-                    },
-
-                    Flow = Flows.Hybrid,
-                    AllowClientCredentialsOnly = true,
-
-                    RedirectUris = new List<string>
-                    {
-                        "https://someUri",
+                        "https://op.certification.openid.net:60272/authz_cb",
                     }
                 }
             };
