@@ -26,6 +26,24 @@ namespace AzureWebSitesDeployment.Config
                     {
                         "https://op.certification.openid.net:60274/authz_cb",
                     }
+                },
+                new Client
+                {
+                    ClientName = "Implicit",
+                    Enabled = true,
+
+                    ClientId = "implicit",
+                    ClientSecrets = new List<ClientSecret>
+                    {
+                        new ClientSecret("secret".Sha256())
+                    },
+
+                    Flow = Flows.Implicit,
+                    
+                    RedirectUris = new List<string>
+                    {
+                        "https://op.certification.openid.net:60275/authz_cb",
+                    }
                 }
             };
         }
