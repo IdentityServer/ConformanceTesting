@@ -104,7 +104,7 @@
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="Thinktecture.IdentityServer3, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Thinktecture.IdentityServer3.1.5.3\lib\net45\Thinktecture.IdentityServer3.dll</HintPath>
+      <HintPath>..\packages\Thinktecture.IdentityServer3.1.5.4\lib\net45\Thinktecture.IdentityServer3.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
