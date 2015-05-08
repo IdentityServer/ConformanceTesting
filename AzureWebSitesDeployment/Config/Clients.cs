@@ -24,7 +24,7 @@ namespace AzureWebSitesDeployment.Config
                     
                     RedirectUris = new List<string>
                     {
-                        "https://op.certification.openid.net:60272/authz_cb",
+                        "https://op.certification.openid.net:60274/authz_cb",
                     }
                 }
             };
