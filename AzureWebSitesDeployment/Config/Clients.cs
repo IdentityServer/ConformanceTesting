@@ -44,6 +44,24 @@ namespace AzureWebSitesDeployment.Config
                     {
                         "https://op.certification.openid.net:60275/authz_cb",
                     }
+                },
+                new Client
+                {
+                    ClientName = "Hybrid",
+                    Enabled = true,
+
+                    ClientId = "hybrid",
+                    ClientSecrets = new List<ClientSecret>
+                    {
+                        new ClientSecret("secret".Sha256())
+                    },
+
+                    Flow = Flows.Hybrid,
+                    
+                    RedirectUris = new List<string>
+                    {
+                        "https://op.certification.openid.net:60276/authz_cb",
+                    }
                 }
             };
         }
